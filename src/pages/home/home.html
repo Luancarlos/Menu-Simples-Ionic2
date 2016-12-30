@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-navbar class="cabecalho-maior" color="danger">
+    <ion-title>
+      Menu Simples
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <div *ngFor="let itens of produtos" class="menu-quadra" [style.background-color]="itens.cor" (click)="clicou(itens)">
+    <img  src="assets/imagens/{{ itens.icone }}.png" [class.rodar]="itens.ani">
+    <h3>{{ itens.nome }}</h3>
+  </div>
+
+</ion-content>
